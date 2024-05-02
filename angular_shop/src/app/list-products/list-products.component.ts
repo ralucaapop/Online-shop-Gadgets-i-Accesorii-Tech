@@ -42,12 +42,14 @@ export class ListProductsComponent {
   }
 
   onBuy(item: any) {
-    if (this.customerService.getLoggedUser() == null) {
+    /*if (this.customerService.getLoggedUser() == null) {
       alert("Utilizatorul nu este logat, trebuie sa te loghezi inainte sa adaugi produse in cos");
       this.router.navigate(["/", "auth"]);
     } else {
       this.router.navigate(['/', 'product-details', item.id]);
     }
+*/
 
+    this.orderService.addToCart(item);
   }
 }
