@@ -10,6 +10,7 @@ import {CartButtonComponent} from "./cart-button/cart-button.component";
 import {CustomerService} from "../services/customer.service";
 import {NgIf} from "@angular/common";
 import {ConfigurationsService} from "../services/configurations.service";
+import {MatNestedTreeNode, MatTree} from "@angular/material/tree";
 
 @Component({
   selector: 'app-home',
@@ -22,12 +23,20 @@ import {ConfigurationsService} from "../services/configurations.service";
     MatCardModule,
     ListProductsComponent,
     CartButtonComponent,
-    NgIf
+    NgIf,
+    MatNestedTreeNode,
+    MatTree
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  public showProductButtons: boolean=false;
+  public showProductButtons2: boolean=false;
+  public showProductButtons3: boolean=false;
+
+
 
   constructor(public appConfig: ConfigurationsService, private router:Router , private customerService:CustomerService){
 
@@ -43,6 +52,24 @@ export class HomeComponent {
     this.router.navigate(['/','dashboard']);
   }
   onLogOut(){
+    this.router.navigate(['/','auth']);
+  }
+
+  public toggleProductButtons() {
+    this.showProductButtons = !this.showProductButtons;
+  }
+
+  toggleProductButtons2() {
+    this.showProductButtons2 = !this.showProductButtons2;
+
+  }
+
+  toggleProductButtons3() {
+    this.showProductButtons3 = !this.showProductButtons3;
+
+  }
+
+  movePage() {
     this.router.navigate(['/','auth']);
   }
 }
