@@ -54,6 +54,7 @@ export class AuthComponent {
       (response: any) => {
         if (response.message != 'Bad credentials!') {
           console.log('Login with success!');
+          this.customer.setLoggedUser(response.data);
 
           this.resetLoginForm();
 

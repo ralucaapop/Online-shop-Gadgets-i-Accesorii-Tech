@@ -52,7 +52,7 @@ public class AuthServiceImpl implements AuthService {
         if (registerDto.getPassword() == null || registerDto.getPassword().isBlank()) {
             throw new BadRequestException("The password is invalid");
         }
-        if (!registerDto.getPassword().equals(registerDto.getConfirmPassword())) {
+        if (!registerDto.getPassword().equals(registerDto.getReTypePassword())) {
             throw new BadRequestException("Passwords not match");
         }
 
