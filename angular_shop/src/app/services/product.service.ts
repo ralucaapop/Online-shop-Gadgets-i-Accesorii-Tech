@@ -21,6 +21,10 @@ export class ProductService {
     return this.httpClient.get(`${this.appConfig.getApiUrl()}/products/productById/${id}`);
   }
 
+  getProductsByCategory(product_category:string){
+    return this.httpClient.get(`${this.appConfig.getApiUrl()}/products/productByCategory/${product_category}`);
+
+  }
   createProduct(product: any) {
     this.httpClient.post(`${this.appConfig.getApiUrl()}/products/addProduct`, product).subscribe((response: any) => {
       console.log(response);

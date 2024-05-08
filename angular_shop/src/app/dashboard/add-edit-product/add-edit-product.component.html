@@ -54,15 +54,15 @@
         <mat-label>Product Type</mat-label>
         <mat-select [formControl]="productType">
           <mat-option value="Laptop">Laptop</mat-option>
-          <mat-option value="pc">PC</mat-option>
-          <mat-option value="Procesoare (CPU)">Procesoare (CPU)</mat-option>
-          <mat-option value="Plăci de bază (Motherboard)">Plăci de bază (Motherboard)</mat-option>
-          <mat-option value="Plăci video (GPU)">Plăci video (GPU)</mat-option>
-          <mat-option value="Memorii RAM">Memorii RAM</mat-option>
-          <mat-option value="Tastaturi">Tastaturi</mat-option>
-          <mat-option value="Mouse-uri">Mouse-uri</mat-option>
-          <mat-option value="Monitoare">Monitoare</mat-option>
-          <mat-option value="Casti">Casti</mat-option>
+          <mat-option value="PC">PC</mat-option>
+          <mat-option value="Procesor">Procesoare (CPU)</mat-option>
+          <mat-option value="PlacăDeBază">Plăca de bază (Motherboard)</mat-option>
+          <mat-option value="PlăcăVideo">Plăci video (GPU)</mat-option>
+          <mat-option value="MemorieRAM">MemorieRAM</mat-option>
+          <mat-option value="Tastatura">Tastatură</mat-option>
+          <mat-option value="Mouse">Mouse</mat-option>
+          <mat-option value="Monitor">Monitor</mat-option>
+          <mat-option value="Casti">Căsti</mat-option>
 
         </mat-select>
         <mat-error *ngIf="productType.invalid">{{getErrorMessage(productType)}}</mat-error>

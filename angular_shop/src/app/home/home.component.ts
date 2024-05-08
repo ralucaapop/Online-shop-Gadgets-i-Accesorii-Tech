@@ -11,6 +11,7 @@ import {CustomerService} from "../services/customer.service";
 import {NgIf} from "@angular/common";
 import {ConfigurationsService} from "../services/configurations.service";
 import {MatNestedTreeNode, MatTree} from "@angular/material/tree";
+import { ProductService } from "../services/product.service";
 
 @Component({
   selector: 'app-home',
@@ -38,7 +39,8 @@ export class HomeComponent {
 
 
 
-  constructor(public appConfig: ConfigurationsService, private router:Router , private customerService:CustomerService){
+
+  constructor(public appConfig: ConfigurationsService, private router:Router , private customerService:CustomerService,private productService: ProductService){
 
   }
   isUserAdmin(){
@@ -69,7 +71,9 @@ export class HomeComponent {
 
   }
 
-  movePage() {
-    this.router.navigate(['/','auth']);
+  showProducts(category : string) {
+    //this.productService.getProductsByCategory(category).subscribe((data: any[]) => {
+     // this.products = data;
+    //});
   }
 }
