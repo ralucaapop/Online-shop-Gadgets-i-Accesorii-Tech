@@ -72,7 +72,8 @@ export class HomeComponent {
   }
 
   showProducts(category : string) {
-    //this.productService.getProductsByCategory(category).subscribe((data: any[]) => {
+    this.router.navigate(['/','auth']);
+     //this.productService.getProductsByCategory(category).subscribe((data: any[]) => {
      // this.products = data;
     //});
   }

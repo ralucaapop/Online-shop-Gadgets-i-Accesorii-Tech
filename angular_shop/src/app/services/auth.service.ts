@@ -18,4 +18,5 @@ export class AuthService {
   register(registerData: any) {
     return this.httpClient.post(`${this.appConfig.getApiUrl()}/auth/register`, registerData);
   }
+
 }
