@@ -4,7 +4,7 @@
     <div class="div-logo">
       <img class="img-logo" [src]="appConfig.getAppLogo()" />
     </div>
-    <mat-card class="card-menu-button">
+    <mat-card class="card-menu-button-Owner">
       <mat-card-content>
         <p>{{ appConfig.getAppOwner() }}</p>
       </mat-card-content>
@@ -14,6 +14,79 @@
         <p>Dashboard</p>
       </mat-card-content>
     </mat-card>
+
+    <mat-card class="card-menu-button" (click)="toggleProductButtons()">
+      <mat-card-content>
+        <p>Produs</p>
+      </mat-card-content>
+    </mat-card>
+
+    <div *ngIf="showProductButtons">
+      <mat-card class="card-menu-button" (click)="showProducts('PC/Laptop')">
+        <mat-card-content>
+          <p> >Laptopuri/PC </p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="card-menu-button" (click)="toggleProductButtons2()">
+        <mat-card-content>
+          <p> >Componente interne</p>
+        </mat-card-content>
+      </mat-card>
+      <div *ngIf="showProductButtons2">
+        <mat-card class="card-menu-button" (click)="showProducts('Procesoare')">
+          <mat-card-content>
+            <p> >>Procesoare</p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="card-menu-button" (click)="showProducts('PlaciVideo')">
+          <mat-card-content>
+            <p> >>Placi video</p>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-menu-button" (click)="showProducts('PlaciDeBaza')">
+          <mat-card-content>
+            <p> >>Placi de baza</p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="card-menu-button" (click)="showProducts('MemorieRAM')">
+          <mat-card-content>
+            <p> >>MemorieRAM</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <mat-card class="card-menu-button" (click)="toggleProductButtons3()">
+        <mat-card-content>
+          <p> >Componente externe</p>
+        </mat-card-content>
+      </mat-card>
+      <div *ngIf="showProductButtons3">
+        <mat-card class="card-menu-button" (click)="showProducts('Tastaturi')">
+          <mat-card-content>
+            <p> >>Tastaturi</p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="card-menu-button" (click)="showProducts('Mouse')">
+          <mat-card-content>
+            <p> >>Mouse-uri</p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="card-menu-button" (click)="showProducts('Monitoare')">
+          <mat-card-content>
+            <p> >>Monitoare</p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="card-menu-button" (click)="showProducts('Casti')">
+          <mat-card-content>
+            <p> >>Casti</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+    </div>
+
     <mat-card class="card-menu-button" (click)="onLogOut()">
       <mat-card-content>
         <p>Logout</p>
@@ -40,24 +113,18 @@
 
         <div class="div-text">
           <p>
-            Discover a world of endless possibilities with our curated collection of must-have products. Whether you're
-            searching for the latest trends in fashion, cutting-edge gadgets, or unique home decor pieces, we've got you
-            covered. Here's why you'll love shopping with us:
-
-            Unrivaled Selection: Explore thousands of products across multiple categories, carefully handpicked to cater
-            to every taste and preference. From fashion-forward clothing to innovative tech gadgets and everything in
-            between, we've got something for everyone.
+            Bine ați venit la Magazinul Nostru - destinația ta completă pentru pasionații de PC-uri! Suntem aici pentru a-ți oferi cele mai avansate și fiabile componente pentru a-ți construi sau îmbunătăți PC-ul la nivelul următor.
             <br><br>
-            Quality Assurance: We believe in offering only the best to our customers. That's why each product in our
-            collection undergoes rigorous quality checks to ensure durability, performance, and style. Shop with
-            confidence knowing that you're investing in excellence.
+            Indiferent dacă ești un gamer dedicat în căutarea celor mai puternice plăci video, un creator de conținut în căutare de procesoare performante sau un entuziast care dorește cele mai recente inovații în tehnologia de stocare, avem tot ce ai nevoie pentru a-ți transforma visul PC-ului în realitate.
+            <br><br>
+            Descoperă o gamă largă de produse de la branduri de top precum Intel, AMD, NVIDIA, ASUS, MSI și multe altele. De la procesoare puternice și plăci video de ultimă generație la soluții de stocare ultrarapide și periferice ergonomice, ne asigurăm că găsești tot ce ai nevoie pentru a-ți personaliza PC-ul în funcție de nevoile tale specifice.
+            <br><br>
+            Echipa noastră de experți în tehnologie este aici pentru a-ți oferi sfaturi și recomandări personalizate, astfel încât să faci cele mai bune alegeri pentru bugetul și cerințele tale. Și nu uita, avem mereu oferte și promoții speciale pentru a face achiziționarea componentelor PC și mai accesibilă.
 
-            Exceptional Value: Enjoy competitive prices without compromising on quality. We believe that everyone
-            deserves access to top-notch products without breaking the bank. Take advantage of our special deals,
-            discounts, and promotions to get more value for your money.
           </p>
           <img class="img-section"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvgL8aZnPANiRUfY5V22U8DBTvQ6xnxTjBvw&usqp=CAU" />
+               src="https://s13emagst.akamaized.net/products/16317/16316906/images/res_76dc866dd6e7d661eece5ba0979f58d3.jpg?width=720&height=720&hash=786B327A0FDEC358B906E021E4E8E45B
+          "/>
         </div>
       </mat-card-content>
     </mat-card>
@@ -67,30 +134,19 @@
       <mat-card-content>
         <div class="div-text">
           <img class="img-section" style="margin-left: 0px !important; margin-right: 16px"
-            src="https://www.michalsons.com/wp-content/uploads/2020/05/online-shopping-online-store-scaled-e1589481671612.jpg">
+               src="https://s13emagst.akamaized.net/products/64569/64568848/images/res_c2506fcd35ade3b39aadcd1ace4f3508.jpg?width=720&height=720&hash=525621C7E6CB5140415A054FD82E3860">
 
           <p>
-            Seamless Shopping Experience: Say goodbye to hassle-filled shopping experiences. Our user-friendly website
-            is designed to make your online shopping journey smooth and enjoyable. Easily browse, search, and filter
-            through our vast selection, and complete your purchase with just a few clicks.
-
-            Secure Payment Options: Your security is our top priority. That's why we offer a range of secure payment
-            options to choose from, including credit/debit cards, PayPal, and more. Rest assured that your personal and
-            financial information is safe with us.
-            <br><br>
-            Fast and Reliable Shipping: We understand that you're eager to receive your order. That's why we partner
-            with trusted shipping carriers to ensure prompt and reliable delivery to your doorstep. Track your package
-            every step of the way and enjoy speedy shipping times.
-
-            Dedicated Customer Support: Have a question or need assistance? Our friendly customer support team is here
-            to help. Reach out to us via email, phone, or live chat, and we'll promptly address your concerns and
-            provide personalized assistance.
-
-            <br><br>
-            Start Shopping Now: Dive into our diverse collection and experience the convenience of online shopping like
-            never before. Whether you're treating yourself or searching for the perfect gift, {{appConfig.getAppName()}}
-            is
-            your ultimate destination for all things fabulous. Happy shopping!
+            Bine ați venit la magazinul nostru online de componente IT, unde serviciile
+            noastre sunt garantate să vă ofere o experiență impecabilă. Cu o pasiune
+            pentru tehnologie și o dedicare față de clienți, ne străduim să fim partenerul
+            dvs. de încredere în achiziționarea și utilizarea echipamentelor IT.
+            Echipa noastră de experți vă stă la dispoziție pentru a vă oferi consultanță
+            personalizată în alegerea celor mai potrivite produse pentru nevoile dvs.
+            Un aspect deosebit al serviciilor noastre constă în asistența post-vânzare,
+            care include instalare, configurare și mentenanță, asigurându-ne că
+            echipamentele dvs. funcționează optim. Cu un angajament ferm față de
+            satisfacția clienților, vă garantăm că veți găsi nu doar produse de înaltă calitate, ci și servicii impecabile la magazinul nostru de componente IT.
           </p>
         </div>
 

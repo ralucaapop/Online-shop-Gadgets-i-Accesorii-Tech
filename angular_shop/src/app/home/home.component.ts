@@ -30,6 +30,9 @@ import { CartButtonComponent } from "./cart-button/cart-button.component";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  showProductButtons: boolean = false;
+  showProductButtons2: boolean = false;
+  showProductButtons3: boolean = false;
 
   constructor(public appConfig: ConfigurationsService, private router: Router, private customerService: CustomerService) {}
 
@@ -43,5 +46,22 @@ export class HomeComponent {
 
   onLogOut() {
     this.router.navigate(['/', 'auth']);
+  }
+
+  public toggleProductButtons() {
+    this.showProductButtons = !this.showProductButtons;
+  }
+
+  toggleProductButtons2() {
+    this.showProductButtons2 = !this.showProductButtons2;
+  }
+
+  toggleProductButtons3() {
+    this.showProductButtons3 = !this.showProductButtons3;
+  }
+
+  showProducts(category: string) {
+    // this.router.navigate(['/','auth']);  // Pare să fie o greșeală aici, presupunând că vrei să navighezi la produse, nu la auth.
+    // Aici ar trebui să fie codul care încarcă produsele pe baza categoriei.
   }
 }

@@ -18,7 +18,11 @@ export class CustomerService {
   }
 
   public getLoggedUser(){
-    return this.user;
+    return {
+      id : 2,name : "Popescu Mihai",
+      userRole: "CUSTOMER"
+
+    };
   }
 
   getCustomerList() {

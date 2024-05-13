@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class ConfigurationsService {
   private apiUrl: string = 'http://localhost:8081/api';
-  private appName: string = 'Shop Online Manager'
+  private appName: string = 'Magazin componente PC';
   private appOwner: string = 'Endava TEAM';
-  private appLogo: string = 'https://img.freepik.com/premium-vector/online-shopping-logo-design-template-digital-shopping-logo-mouse-cursor-cart-concepts_502185-286.jpg';
+  private appLogo: string = 'https://cdn-icons-png.flaticon.com/512/4703/4703650.png  ';
 
   constructor() { }
 
