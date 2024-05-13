@@ -1,5 +1,6 @@
 package com.java_shop.service.impl;
-
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import com.java_shop.dto.LoginDto;
 import com.java_shop.dto.RegisterDto;
 import com.java_shop.exception.BadRequestException;
@@ -49,8 +50,47 @@ public class AuthServiceImpl implements AuthService {
         if (registerDto.getEmail() == null || registerDto.getEmail().isBlank()) {
             throw new BadRequestException("The email is invalid");
         }
+        else if(!registerDto.getEmail().equals("admin@admin.com") && registerDto.getEmail() != null && registerDto.getEmail().isBlank()== false)
+        {
+            String regex_for_email = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+            Pattern pattern = Pattern.compile(regex_for_email);
+            Matcher matcher = pattern.matcher(registerDto.getEmail());
+            if(!matcher.matches())
+                throw new BadRequestException("The email is invalid");
+        }
         if (registerDto.getPassword() == null || registerDto.getPassword().isBlank()) {
             throw new BadRequestException("The password is invalid");
+        }
+        else if(!registerDto.getEmail().equals("admin@admin.com"))
+        {
+            if((registerDto.getPassword()).length()<8)
+                throw new BadRequestException("The password must contain at least 8 characters");
+            else {
+                String patter_for_digit = ".*\\d+.*";
+                Pattern pattern = Pattern.compile(patter_for_digit);
+                Matcher matcher = pattern.matcher(registerDto.getPassword());
+                boolean containsDigit = matcher.matches();
+                if (!containsDigit) {
+                    throw new BadRequestException("The password must contain at least a digit");
+                } else {
+                    String patter_for_specialChars = ".*[?\\-\\.=_{};:].*";
+                    Pattern pattern1 = Pattern.compile(patter_for_specialChars);
+                    Matcher matcher1 = pattern1.matcher(registerDto.getPassword());
+                    boolean containsSpecialChars = matcher1.matches();
+                    if (!containsSpecialChars) {
+                        throw new BadRequestException("The password must contain at least a special character");
+                    }
+                    else
+                    {
+                        String patter_for_letters= ".*[a-zA-Z].*";
+                        Pattern pattern2 = Pattern.compile(patter_for_letters);
+                        Matcher matcher2 = pattern2.matcher(registerDto.getPassword());
+                        boolean containsLetters = matcher2.matches();
+                        if(!containsLetters)
+                            throw new BadRequestException("The password must contain at least a letter");
+                    }
+                }
+            }
         }
         if (!registerDto.getPassword().equals(registerDto.getReTypePassword())) {
             throw new BadRequestException("Passwords not match");
