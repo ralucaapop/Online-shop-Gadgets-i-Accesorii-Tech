@@ -14,13 +14,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@RequiredArgsConstructor
 @RestController
 @CrossOrigin("http://localhost:4200")
 @RequestMapping("/api/customers")
-public class CustomerController {
+public class   CustomerController {
 
     private final CustomerService customerService;
+
+    public CustomerController(CustomerService customerService) {
+        this.customerService = customerService;
+    }
 
     @GetMapping
     public ResponseEntity<ApiResponse> getAllCustomers() {
