@@ -1,15 +1,16 @@
+import { NgIf } from "@angular/common";
 import { Component } from '@angular/core';
-import {MatSidenavModule} from "@angular/material/sidenav";
-import {MatButtonModule} from "@angular/material/button";
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatIconModule} from "@angular/material/icon";
-import {MatCardModule} from "@angular/material/card";
-import {Router} from "@angular/router";
-import {ListProductsComponent} from "../list-products/list-products.component";
-import {CartButtonComponent} from "./cart-button/cart-button.component";
-import {CustomerService} from "../services/customer.service";
-import {NgIf} from "@angular/common";
-import {ConfigurationsService} from "../services/configurations.service";
+import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
+import { MatIconModule } from "@angular/material/icon";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { Router } from "@angular/router";
+import { ListProductsComponent } from "../list-products/list-products.component";
+import { ConfigurationsService } from "../services/configurations.service";
+import { CustomerService } from "../services/customer.service";
+import { BannerComponent } from './banner/banner.component'; // Asumați că banner este în folderul `home/banner`
+import { CartButtonComponent } from "./cart-button/cart-button.component";
 
 @Component({
   selector: 'app-home',
@@ -22,27 +23,25 @@ import {ConfigurationsService} from "../services/configurations.service";
     MatCardModule,
     ListProductsComponent,
     CartButtonComponent,
-    NgIf
+    NgIf,
+    BannerComponent  // Adaugă BannerComponent aici
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
 
-  constructor(public appConfig: ConfigurationsService, private router:Router , private customerService:CustomerService){
+  constructor(public appConfig: ConfigurationsService, private router: Router, private customerService: CustomerService) {}
 
+  isUserAdmin() {
+    return this.customerService.getLoggedUser() != null && this.customerService.getLoggedUser().userRole === "ADMIN";
   }
-  isUserAdmin(){
-    if(this.customerService.getLoggedUser() != null && this.customerService.getLoggedUser().userRole == "ADMIN"){
-      return true;
-    }
-    return false;
 
+  onDashboard() {
+    this.router.navigate(['/', 'dashboard']);
   }
-  onDashboard(){
-    this.router.navigate(['/','dashboard']);
-  }
-  onLogOut(){
-    this.router.navigate(['/','auth']);
+
+  onLogOut() {
+    this.router.navigate(['/', 'auth']);
   }
 }

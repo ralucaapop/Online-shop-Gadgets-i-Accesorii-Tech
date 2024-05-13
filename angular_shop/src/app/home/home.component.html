@@ -2,8 +2,7 @@
   <mat-drawer #drawer class="drawer-sidenav" mode="side">
 
     <div class="div-logo">
-      <img class="img-logo"
-           [src]="appConfig.getAppLogo()"/>
+      <img class="img-logo" [src]="appConfig.getAppLogo()" />
     </div>
     <mat-card class="card-menu-button">
       <mat-card-content>
@@ -32,12 +31,8 @@
       <app-cart-button></app-cart-button>
     </mat-toolbar>
 
-    <img class="img-banner"
-         src="https://i.pinimg.com/originals/b1/3b/2f/b13b2f17232adde6a6182cd680bf46ea.jpg"/>
-    <img class="img-banner"
-         src="https://wallpapercave.com/wp/wp9442288.jpg"/>
-    <img class="img-banner"
-         src="https://e0.pxfuel.com/wallpapers/786/725/desktop-wallpaper-ecommerce-solutions-smart-online-shopping.jpg"/>
+    <app-banner></app-banner>
+
 
     <mat-card class="card-about-us">
       <mat-card-title class="title-about-us">Welcome to {{ appConfig.getAppName() }}</mat-card-title>
@@ -62,7 +57,7 @@
             discounts, and promotions to get more value for your money.
           </p>
           <img class="img-section"
-               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvgL8aZnPANiRUfY5V22U8DBTvQ6xnxTjBvw&usqp=CAU"/>
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvgL8aZnPANiRUfY5V22U8DBTvQ6xnxTjBvw&usqp=CAU" />
         </div>
       </mat-card-content>
     </mat-card>
@@ -72,7 +67,7 @@
       <mat-card-content>
         <div class="div-text">
           <img class="img-section" style="margin-left: 0px !important; margin-right: 16px"
-               src="https://www.michalsons.com/wp-content/uploads/2020/05/online-shopping-online-store-scaled-e1589481671612.jpg">
+            src="https://www.michalsons.com/wp-content/uploads/2020/05/online-shopping-online-store-scaled-e1589481671612.jpg">
 
           <p>
             Seamless Shopping Experience: Say goodbye to hassle-filled shopping experiences. Our user-friendly website
@@ -106,4 +101,3 @@
   </div>
 
 </mat-drawer-container>
-
