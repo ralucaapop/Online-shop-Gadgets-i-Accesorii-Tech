@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
+
 java_shop/.db-data/
 *.sock
 # Node
