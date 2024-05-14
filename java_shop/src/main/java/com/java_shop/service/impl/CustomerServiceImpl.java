@@ -40,7 +40,6 @@ public class CustomerServiceImpl implements CustomerService {
     public Customer updateCustomer(Customer customer) {
         String password = BCrypt.hashpw(customer.getPassword(), BCrypt.gensalt());
         customer.setPassword(password);
-
         return customerRepository.save(customer);
     }
 

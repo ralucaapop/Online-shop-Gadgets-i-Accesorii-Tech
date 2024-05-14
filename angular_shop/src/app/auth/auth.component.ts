@@ -55,7 +55,10 @@ export class AuthComponent {
         if (response.message != 'Bad credentials!') {
           console.log('Login with success!');
           this.customer.setLoggedUser(response.data);
+<<<<<<< HEAD
 
+=======
+>>>>>>> bdeb9ea90abc1ce464f7174998bff2858bc51059
 
           this.resetLoginForm();
 
@@ -73,11 +76,31 @@ export class AuthComponent {
   }
 
   onRegister(): void {
-    if (
-      this.registerForm.value.password != this.registerForm.value.reTypePassword
-    ) {
+
+    const password = this.registerForm.value.password;
+    const patter_for_letters= /.*[a-zA-Z].*/;
+    const patter_for_specialChars = /.*[?\-\.=_{};:].*/;
+    const patter_for_digit = /.*\d+.*/;
+    const regex_for_email = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    const emailV =this.registerForm.value.email;
+    if (!regex_for_email.test(emailV))
+    {      alert('Invalid email address');
+    }
+    else if (this.registerForm.value.password.length < 8) {
+      alert('Password must be at least 8 characters long');
+    }
+    else if (!patter_for_digit.test(password)) {
+      alert('The password must contain at least a digit');
+    } else if (!patter_for_specialChars.test(password)) {
+      alert('The password must contain at least a special character(?.={},;:) ');
+    } else if (!patter_for_letters.test(password)) {
+      alert('The password must contain at least a letter');
+    }     if (this.registerForm.value.password != this.registerForm.value.reTypePassword)
+    {
       alert('Passwords do not match');
-    } else {
+    }
+    else {
       this.authService.register(this.registerForm.value).subscribe(
         (response: any) => {
           console.log('Register with success!');

@@ -1,5 +1,6 @@
 package com.java_shop.service.impl;
-
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import com.java_shop.dto.LoginDto;
 import com.java_shop.dto.RegisterDto;
 import com.java_shop.exception.BadRequestException;
@@ -48,6 +49,14 @@ public class AuthServiceImpl implements AuthService {
         }
         if (registerDto.getEmail() == null || registerDto.getEmail().isBlank()) {
             throw new BadRequestException("The email is invalid");
+        }
+        else if(!registerDto.getEmail().equals("admin@admin.com") && registerDto.getEmail() != null && registerDto.getEmail().isBlank()== false)
+        {
+            String regex_for_email = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+            Pattern pattern = Pattern.compile(regex_for_email);
+            Matcher matcher = pattern.matcher(registerDto.getEmail());
+            if(!matcher.matches())
+                throw new BadRequestException("The email is invalid");
         }
         if (registerDto.getPassword() == null || registerDto.getPassword().isBlank()) {
             throw new BadRequestException("The password is invalid");

@@ -1,2 +1,5 @@
-package com.java_shop.service;public interface AdminService {
+package com.java_shop.service;
+
+public interface AdminService {
+    void setup();
 }

@@ -47,9 +47,13 @@ export class ListProductsComponent {
       this.router.navigate(["/", "auth"]);
     } else {
       this.router.navigate(['/', 'product-details', item.id]);
+<<<<<<< HEAD
     }
 */
 
+=======
+    }*/
+>>>>>>> bdeb9ea90abc1ce464f7174998bff2858bc51059
     this.orderService.addToCart(item);
   }
 }
