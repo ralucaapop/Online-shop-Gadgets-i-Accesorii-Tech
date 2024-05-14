@@ -12,6 +12,7 @@ import {ListCustomersComponent} from "./list-customers/list-customers.component"
 import {ListOrdersComponent} from "./list-orders/list-orders.component";
 import {ConfigurationsService} from "../services/configurations.service";
 import {TitleCasePipe} from "@angular/common";
+import {MatNestedTreeNode, MatTree} from "@angular/material/tree";
 
 @Component({
   selector: 'app-dashboard',
@@ -27,7 +28,9 @@ import {TitleCasePipe} from "@angular/common";
     AddEditCustomerComponent,
     ListCustomersComponent,
     ListOrdersComponent,
-    TitleCasePipe
+    TitleCasePipe,
+    MatTree,
+    MatNestedTreeNode
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'

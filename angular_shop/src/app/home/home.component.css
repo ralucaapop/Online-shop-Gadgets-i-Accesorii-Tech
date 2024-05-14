@@ -11,10 +11,16 @@
 .drawer-sidenav {
   padding: 20px;
 }
-
+.card-menu-button-Owner{
+  width: 350px;
+  margin-bottom: 16px;
+  cursor: none;
+  text-align:center;
+}
 .card-menu-button {
   width: 350px;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 
 .div-logo {

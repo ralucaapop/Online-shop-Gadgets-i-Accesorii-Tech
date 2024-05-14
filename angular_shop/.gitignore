@@ -18,6 +18,7 @@ java_shop/.db-data/
 *.tmp
 
 # Exclude database sockets
+java_shop/.db-data/
 *.sock
 # Node
 /node_modules
@@ -32,6 +33,8 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
+# Ignore database files and socket connections
+
 
 # Visual Studio Code
 .vscode/*

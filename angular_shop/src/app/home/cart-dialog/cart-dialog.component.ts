@@ -8,6 +8,7 @@ import {OrderService} from "../../services/order.service";
 import {FormControl, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {MatError, MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
+import { Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-cart-dialog',
@@ -39,14 +40,18 @@ export class CartDialogComponent {
   constructor(private orderService: OrderService) {
     this.orderService.getCart().subscribe((productsList: Array<any>) => {
       this.products = productsList;
+      this.loadCartItems();
     });
   }
 
   public onBuy() {
     this.orderService.createOrder(this.details.getRawValue()!);
+    localStorage.setItem('cartItems', JSON.stringify(this.products));
   }
 
   public onDeleteFromCart(product: any) {
+    this.products = this.products.filter(cartItem => cartItem.id !== product.id);
+    localStorage.setItem('cartItems', JSON.stringify(this.products));
     this.orderService.removeFromCart(product);
   }
 
@@ -55,5 +60,11 @@ export class CartDialogComponent {
       return 'You must enter a value';
     }
     return '';
+  }
+  private loadCartItems() {
+    const savedCartItems = localStorage.getItem('cartItems');
+    if (savedCartItems) {
+      this.products = JSON.parse(savedCartItems);
+    }
   }
 }

@@ -5,16 +5,23 @@
       <img class="img-logo"
            [src]="appConfig.getAppLogo()"/>
     </div>
+
     <mat-card class="card-menu-button">
       <mat-card-content>
         <p>{{ appConfig.getAppOwner() }}</p>
       </mat-card-content>
     </mat-card>
+
     <mat-card class="card-menu-button" (click)="onHome()">
       <mat-card-content>
         <p>Home</p>
       </mat-card-content>
     </mat-card>
+
+
+
+
+
     <mat-card class="card-menu-button" (click)="onLogOut()">
       <mat-card-content>
         <p>Logout</p>
