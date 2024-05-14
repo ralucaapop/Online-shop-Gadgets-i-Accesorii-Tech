@@ -5,7 +5,8 @@
 /tmp
 /out-tsc
 /bazel-out
-
+java_shop/.db-data/
+*.sock
 # Node
 /node_modules
 npm-debug.log
@@ -19,6 +20,8 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
+# Ignore database files and socket connections
+
 
 # Visual Studio Code
 .vscode/*
