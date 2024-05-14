@@ -5,7 +5,7 @@ import {NgForOf, NgIf, TitleCasePipe} from "@angular/common";
 import {MatButtonModule} from "@angular/material/button";
 import {OrderService} from "../services/order.service";
 import {CustomerService} from "../services/customer.service";
-import {Router} from "@angular/router";
+import {Router} from "@angular/router"; 
 
 @Component({
   selector: 'app-list-products',

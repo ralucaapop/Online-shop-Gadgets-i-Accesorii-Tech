@@ -6,6 +6,19 @@
 /out-tsc
 /bazel-out
 
+# Exclude IDE files
+.idea/
+
+# Exclude database files
+java_shop/.db-data/
+
+# Exclude other temporary files and logs
+*.log
+*.temp
+*.tmp
+
+# Exclude database sockets
+*.sock
 # Node
 /node_modules
 npm-debug.log
