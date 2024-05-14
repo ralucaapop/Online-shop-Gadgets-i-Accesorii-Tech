@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
-import {MatSidenavModule} from "@angular/material/sidenav";
-import {MatButtonModule} from "@angular/material/button";
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatIconModule} from "@angular/material/icon";
-import {MatCardModule} from "@angular/material/card";
-import {Router} from "@angular/router";
-import {ListProductsComponent} from "../list-products/list-products.component";
-import {CartButtonComponent} from "./cart-button/cart-button.component";
-import {CustomerService} from "../services/customer.service";
-import {NgIf} from "@angular/common";
-import {ConfigurationsService} from "../services/configurations.service";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatButtonModule } from "@angular/material/button";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatIconModule } from "@angular/material/icon";
+import { MatCardModule } from "@angular/material/card";
+import { Router } from "@angular/router";
+import { ListProductsComponent } from "../list-products/list-products.component";
+import { CartButtonComponent } from "./cart-button/cart-button.component";
+import { CustomerService } from "../services/customer.service";
+import { NgIf } from "@angular/common";
+import { ConfigurationsService } from "../services/configurations.service";
+import { SlidesComponent } from '../home/slides/slides.component';  // Ensure this line is corrected
 
 @Component({
   selector: 'app-home',
@@ -22,27 +23,28 @@ import {ConfigurationsService} from "../services/configurations.service";
     MatCardModule,
     ListProductsComponent,
     CartButtonComponent,
-    NgIf
+    NgIf,
+    SlidesComponent  // Now correctly added
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  constructor(
+    public appConfig: ConfigurationsService, 
+    private router: Router, 
+    private customerService: CustomerService
+  ) {}
 
-  constructor(public appConfig: ConfigurationsService, private router:Router , private customerService:CustomerService){
-
+  isUserAdmin() {
+    return this.customerService.getLoggedUser() != null && this.customerService.getLoggedUser().userRole === "ADMIN";
   }
-  isUserAdmin(){
-    if(this.customerService.getLoggedUser() != null && this.customerService.getLoggedUser().userRole == "ADMIN"){
-      return true;
-    }
-    return false;
 
-  }
-  onDashboard(){
+  onDashboard() {
     this.router.navigate(['/','dashboard']);
   }
-  onLogOut(){
+
+  onLogOut() {
     this.router.navigate(['/','auth']);
   }
 }
