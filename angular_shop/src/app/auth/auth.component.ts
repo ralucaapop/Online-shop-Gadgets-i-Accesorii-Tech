@@ -1,14 +1,14 @@
-import {Component} from '@angular/core';
-import {MatButtonModule} from "@angular/material/button";
-import {MatCardModule} from "@angular/material/card";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatInputModule} from "@angular/material/input";
-import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
-import {NgIf, NgSwitch, NgSwitchCase} from "@angular/common";
-import {AuthService} from "../services/auth.service";
-import {CustomerService} from "../services/customer.service";
-import {Router} from "@angular/router";
-import {ConfigurationsService} from "../services/configurations.service";
+import { NgIf, NgSwitch, NgSwitchCase } from "@angular/common";
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
+import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+import { Router } from "@angular/router";
+import { AuthService } from "../services/auth.service";
+import { ConfigurationsService } from "../services/configurations.service";
+import { CustomerService } from "../services/customer.service";
 
 @Component({
   selector: 'app-auth',
@@ -55,10 +55,6 @@ export class AuthComponent {
         if (response.message != 'Bad credentials!') {
           console.log('Login with success!');
           this.customer.setLoggedUser(response.data);
-<<<<<<< HEAD
-
-=======
->>>>>>> bdeb9ea90abc1ce464f7174998bff2858bc51059
 
           this.resetLoginForm();
 

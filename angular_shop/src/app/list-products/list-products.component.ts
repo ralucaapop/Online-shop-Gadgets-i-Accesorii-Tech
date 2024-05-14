@@ -1,11 +1,11 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {ProductService} from "../services/product.service";
-import {MatCardModule} from "@angular/material/card";
-import {NgForOf, NgIf, TitleCasePipe} from "@angular/common";
-import {MatButtonModule} from "@angular/material/button";
-import {OrderService} from "../services/order.service";
-import {CustomerService} from "../services/customer.service";
-import {Router} from "@angular/router";
+import { NgForOf, NgIf, TitleCasePipe } from "@angular/common";
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
+import { Router } from "@angular/router";
+import { CustomerService } from "../services/customer.service";
+import { OrderService } from "../services/order.service";
+import { ProductService } from "../services/product.service";
 
 @Component({
   selector: 'app-list-products',
@@ -47,13 +47,7 @@ export class ListProductsComponent {
       this.router.navigate(["/", "auth"]);
     } else {
       this.router.navigate(['/', 'product-details', item.id]);
-<<<<<<< HEAD
-    }
-*/
-
-=======
     }*/
->>>>>>> bdeb9ea90abc1ce464f7174998bff2858bc51059
     this.orderService.addToCart(item);
   }
 }
