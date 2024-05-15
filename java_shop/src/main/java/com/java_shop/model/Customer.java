@@ -26,12 +26,17 @@ public class Customer {
     @JsonIgnoreProperties("customer")
     private List<OrderData> orderData;
 
-    public void setName(String popescuMihai) {
-    }
-
-    public void setEmail(String mail) {
-    }
-
-    public void setAddress(String s) {
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", phone='" + phone + '\'' +
+                ", userRole=" + userRole +
+                ", orderData=" + orderData +
+                '}';
     }
 }
