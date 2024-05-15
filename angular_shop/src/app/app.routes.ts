@@ -2,6 +2,7 @@ import {Routes} from '@angular/router';
 import {AuthComponent} from "./auth/auth.component";
 import {HomeComponent} from "./home/home.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
+import {ProductChoiceComponentComponent} from "./product/product-choice.component";
 import {AuthGuard} from "./auth/auth.guard";
 import {CustomersManagerComponent} from "./dashboard/customers-manager/customers-manager.component";
 import {OrdersManagerComponent} from "./dashboard/orders-manager/orders-manager.component";
@@ -18,6 +19,9 @@ export const routes: Routes = [
   },
   {
     path:'product-details/:id', component: ProductDetailsComponent
+  },
+  {
+    path:'product-choice', component: ProductChoiceComponentComponent
   },
   {
     path: "dashboard", children: [

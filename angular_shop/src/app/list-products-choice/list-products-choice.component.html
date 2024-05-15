@@ -1,0 +1,17 @@
+<div class="page-view">
+  <mat-card *ngFor="let product of products" class="card-item">
+    <img [src]="product.image1" class="image"/>
+
+    <mat-card-content>
+      <p class="p-title">{{ product.name | titlecase}} </p>
+      <p class="p-description">Description: {{ product.description }}</p>
+      <p>Product Type: {{ product.productType | titlecase }}</p>
+      <p >Price:<span class="p-price">{{ product.price }} RON</span></p>
+
+      <div *ngIf="!isAdmin" class="div-controls">
+        <button mat-raised-button color="primary" class="btn-buy" (click)="onBuy(product)">Buy now!</button>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+</div>

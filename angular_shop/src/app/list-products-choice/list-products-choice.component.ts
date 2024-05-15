@@ -8,7 +8,7 @@ import {CustomerService} from "../services/customer.service";
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-list-products',
+  selector: 'app-list-products-choice',
   standalone: true,
   imports: [
     MatCardModule,
@@ -17,10 +17,10 @@ import {Router} from "@angular/router";
     NgIf,
     TitleCasePipe
   ],
-  templateUrl: './list-products.component.html',
+  templateUrl: './list-products-choice.component.html',
   styleUrl: './list-products-choice.component.css'
 })
-export class ListProductsComponent {
+export class ListProductsChoiceComponent {
   @Output() changeData = new EventEmitter<any>();// EventEmitter ne ajuta sa transmitem obiecte inafara componentei
   @Input("isAdmin") isAdmin: boolean = false;
   products: Array<any> = [];
@@ -30,15 +30,6 @@ export class ListProductsComponent {
       this.products = productList;
     })
 
-  }
-
-  onEdit(item: any) {
-    this.changeData.emit(item);
-  }
-
-  onDelete(item: any) {
-    console.log(item);
-    this.productService.deleteProduct(item);
   }
 
   onBuy(item: any) {
