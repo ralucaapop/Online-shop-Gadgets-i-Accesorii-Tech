@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, input, Output} from '@angular/core';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatButtonModule} from "@angular/material/button";
 import {MatToolbarModule} from "@angular/material/toolbar";
@@ -36,6 +36,7 @@ export class ProductChoiceComponentComponent {
   public showProductButtons: boolean=false;
   public showProductButtons2: boolean=false;
   public showProductButtons3: boolean=false;
+  @Output() categorySelected = new EventEmitter<string>;
 
   constructor(public appConfig: ConfigurationsService, private router:Router , private customerService:CustomerService,private productService: ProductService){
 
@@ -71,8 +72,6 @@ export class ProductChoiceComponentComponent {
 
   showProducts(category : string) {
     this.router.navigate(['/','product-choice']);
-    //this.productService.getProductsByCategory(category).subscribe((data: any[]) => {
-    // this.products = data;
-    //});
+    this.categorySelected.emit(category);
   }
 }
