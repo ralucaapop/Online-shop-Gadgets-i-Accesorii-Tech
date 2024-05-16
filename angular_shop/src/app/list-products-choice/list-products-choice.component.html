@@ -1,0 +1,16 @@
+<app-product (categorySelected) = "filterProductsByCategory($event)"></app-product>
+
+<div class="page-view">
+  <mat-card *ngFor="let product of filteredProducts" class="card-item">
+    <img [src]="product.image1" class="image"/>
+
+    <mat-card-content>
+      <p class="p-title">{{ product.name | titlecase}} </p>
+      <p class="p-description">Description: {{ product.description }}</p>
+      <p>Product Type: {{ product.productType | titlecase }}</p>
+      <p >Price:<span class="p-price">{{ product.price }} RON</span></p>
+
+
+    </mat-card-content>
+  </mat-card>
+</div>

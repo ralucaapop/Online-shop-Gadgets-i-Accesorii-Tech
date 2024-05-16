@@ -60,8 +60,10 @@ export class HomeComponent {
     this.showProductButtons3 = !this.showProductButtons3;
   }
 
-  showProducts(category: string) {
-    // this.router.navigate(['/','auth']);  // Pare să fie o greșeală aici, presupunând că vrei să navighezi la produse, nu la auth.
-    // Aici ar trebui să fie codul care încarcă produsele pe baza categoriei.
+  showProducts(category : string) {
+    this.router.navigate(['/','product-choice']);
+     //this.productService.getProductsByCategory(category).subscribe((data: any[]) => {
+     // this.products = data;
+    //});
   }
 }
