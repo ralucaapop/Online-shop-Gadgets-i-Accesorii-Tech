@@ -13,6 +13,36 @@ target/
 .springBeans
 .sts4-cache
 
+# Exclude IDE files
+.idea/
+
+# Exclude database files
+java_shop/.db-data/
+# Exclude other temporary files and logs
+*.log
+*.temp
+*.tmp
+
+# Exclude database sockets
+.db-data/
+*.sock
+
+*.dblwr
+*.ibd
+*.ibdata1
+*.cnf
+*.index
+*.undo_001
+*.undo_002
+# Node
+
+# Exclude other temporary files and logs
+*.log
+*.temp
+*.tmp
+# Exclude database sockets
+*.sock
+
 ### IntelliJ IDEA ###
 .idea
 *.iws

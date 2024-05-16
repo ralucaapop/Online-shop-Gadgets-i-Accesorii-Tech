@@ -6,8 +6,28 @@
 /out-tsc
 /bazel-out
 
+# Exclude IDE files
+.idea/
+
+# Exclude database files
+java_shop/.db-data/
+
+# Exclude other temporary files and logs
+*.log
+*.temp
+*.tmp
+
+# Exclude database sockets
 java_shop/.db-data/
 *.sock
+java_shop/.db-data/
+*.dblwr
+*.ibd
+*.ibdata1
+*.cnf
+*.index
+*.undo_001
+*.undo_002
 # Node
 /node_modules
 npm-debug.log
