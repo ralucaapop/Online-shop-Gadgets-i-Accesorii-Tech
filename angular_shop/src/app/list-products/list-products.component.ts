@@ -1,11 +1,11 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {ProductService} from "../services/product.service";
-import {MatCardModule} from "@angular/material/card";
-import {NgForOf, NgIf, TitleCasePipe} from "@angular/common";
-import {MatButtonModule} from "@angular/material/button";
-import {OrderService} from "../services/order.service";
-import {CustomerService} from "../services/customer.service";
-import {Router} from "@angular/router"; 
+import { NgForOf, NgIf, TitleCasePipe } from "@angular/common";
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
+import { Router } from "@angular/router";
+import { CustomerService } from "../services/customer.service";
+import { OrderService } from "../services/order.service";
+import { ProductService } from "../services/product.service";
 
 @Component({
   selector: 'app-list-products',
