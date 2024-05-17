@@ -1,196 +1,188 @@
 {
-  "produse": [
+  "products": [
     {
-      "nume": "Laptop ASUS ZenBook",
-      "descriere": "Laptop ultrabook de 14 inch cu procesor Intel Core i7, 16GB RAM și 512GB SSD.",
-      "imagine": "url_to_image1.jpg",
-      "pret": 4500,
-      "categorie": "laptopuri",
-      "subcategorie": "ultrabook"
+      "name": "Laptop ASUS ZenBook",
+      "description": "Laptop ultrabook de 14 inch cu procesor Intel Core i7, 16GB RAM și 512GB SSD.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 4500,
+      "productType": "Laptop"
     },
     {
-      "nume": "Laptop Razer Blade 15",
-      "descriere": "Laptop de gaming de 15 inch cu procesor Intel Core i7, 16GB RAM și 1TB SSD.",
-      "imagine": "url_to_image2.jpg",
-      "pret": 9500,
-      "categorie": "laptopuri",
-      "subcategorie": "gaming"
+      "name": "Laptop Razer Blade 15",
+      "description": "Laptop de gaming de 15 inch cu procesor Intel Core i7, 16GB RAM și 1TB SSD.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 9500,
+      "productType": "Laptop"
     },
     {
-      "nume": "Laptop Lenovo ThinkPad X1 Carbon",
-      "descriere": "Laptop business de 14 inch cu procesor Intel Core i7, 16GB RAM și 1TB SSD.",
-      "imagine": "url_to_image3.jpg",
-      "pret": 7500,
-      "categorie": "laptopuri",
-      "subcategorie": "business"
+      "name": "Laptop Lenovo ThinkPad X1 Carbon",
+      "description": "Laptop business de 14 inch cu procesor Intel Core i7, 16GB RAM și 1TB SSD.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 7500,
+      "productType": "Laptop"
     },
     {
-      "nume": "Laptop HP Spectre x360",
-      "descriere": "Laptop convertibil de 13 inch cu ecran tactil, procesor Intel Core i7, 16GB RAM și 512GB SSD.",
-      "imagine": "url_to_image4.jpg",
-      "pret": 6800,
-      "categorie": "laptopuri",
-      "subcategorie": "convertibil"
+      "name": "Laptop HP Spectre x360",
+      "description": "Laptop convertibil de 13 inch cu ecran tactil, procesor Intel Core i7, 16GB RAM și 512GB SSD.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 6800,
+      "productType": "Laptop"
     },
     {
-      "nume": "Procesor Intel Core i9",
-      "descriere": "Procesor Intel Core i9-10900K, 10 nuclee, 3.7 GHz, socket LGA1200.",
-      "imagine": "url_to_image5.jpg",
-      "pret": 2500,
-      "categorie": "componente interne",
-      "subcategorie": "procesor"
+      "name": "Procesor Intel Core i9",
+      "description": "Procesor Intel Core i9-10900K, 10 nuclee, 3.7 GHz, socket LGA1200.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 2500,
+      "productType": "Procesoare"
     },
     {
-      "nume": "Placă video NVIDIA GeForce RTX 3080",
-      "descriere": "Placă video cu 10GB GDDR6X, ideală pentru gaming și aplicații grafice intensive.",
-      "imagine": "url_to_image6.jpg",
-      "pret": 4500,
-      "categorie": "componente interne",
-      "subcategorie": "placa video"
+      "name": "Placă video NVIDIA GeForce RTX 3080",
+      "description": "Placă video cu 10GB GDDR6X, ideală pentru gaming și aplicații grafice intensive.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 4500,
+      "productType": "PlaciVideo"
     },
     {
-      "nume": "Memorie RAM Corsair Vengeance 16GB",
-      "descriere": "Kit de memorie RAM DDR4 de 16GB, 3200MHz, pentru performanțe superioare.",
-      "imagine": "url_to_image7.jpg",
-      "pret": 600,
-      "categorie": "componente interne",
-      "subcategorie": "memorie RAM"
+      "name": "Memorie RAM Corsair Vengeance 16GB",
+      "description": "Kit de memorie RAM DDR4 de 16GB, 3200MHz, pentru performanțe superioare.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 600,
+      "productType": "MemoriiRAM"
     },
     {
-      "nume": "SSD Samsung 970 EVO Plus 1TB",
-      "descriere": "SSD NVMe M.2 de 1TB, ideal pentru viteze rapide de citire și scriere.",
-      "imagine": "url_to_image8.jpg",
-      "pret": 900,
-      "categorie": "componente interne",
-      "subcategorie": "SSD"
+      "name": "SSD Samsung 970 EVO Plus 1TB",
+      "description": "SSD NVMe M.2 de 1TB, ideal pentru viteze rapide de citire și scriere.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 900,
+      "productType": "SSD"
     },
     {
-      "nume": "Placă de bază ASUS ROG Strix Z490-E",
-      "descriere": "Placă de bază pentru gaming cu socket LGA1200, suport pentru DDR4, USB 3.2.",
-      "imagine": "url_to_image9.jpg",
-      "pret": 1200,
-      "categorie": "componente interne",
-      "subcategorie": "placa de baza"
+      "name": "Placă de bază ASUS ROG Strix Z490-E",
+      "description": "Placă de bază pentru gaming cu socket LGA1200, suport pentru DDR4, USB 3.2.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 1200,
+      "productType": "PlaciDeBaza"
+    },
+
+    {
+      "name": "Hard disk Western Digital 4TB",
+      "description": "Hard disk intern de 4TB, 7200RPM, ideal pentru stocare masivă de date.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 600,
+      "productType": "HardDisk"
+    },
+
+    {
+      "name": "Cablu SATA III de 0.5m",
+      "description": "Cablu SATA III pentru conectarea dispozitivelor de stocare interne.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 20,
+      "productType": "Cablu"
     },
     {
-      "nume": "Sursa de alimentare Corsair RM850x",
-      "descriere": "Sursă de alimentare modulară de 850W, certificare 80 PLUS Gold.",
-      "imagine": "url_to_image10.jpg",
-      "pret": 650,
-      "categorie": "componente interne",
-      "subcategorie": "sursa de alimentare"
+      "name": "Monitor Dell UltraSharp 27",
+      "description": "Monitor de 27 inch cu rezoluție 4K, ideal pentru editare foto și video.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 2200,
+      "productType": "Monitoare"
     },
     {
-      "nume": "Cooler procesor Noctua NH-D15",
-      "descriere": "Cooler de procesor cu două ventilatoare, ideal pentru răcire silențioasă și eficientă.",
-      "imagine": "url_to_image11.jpg",
-      "pret": 400,
-      "categorie": "componente interne",
-      "subcategorie": "cooler procesor"
+      "name": "Tastatură mecanică Logitech G Pro X",
+      "description": "Tastatură mecanică de gaming cu switch-uri personalizabile.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 600,
+      "productType": "Tastaturi"
     },
     {
-      "nume": "Hard disk Western Digital 4TB",
-      "descriere": "Hard disk intern de 4TB, 7200RPM, ideal pentru stocare masivă de date.",
-      "imagine": "url_to_image12.jpg",
-      "pret": 600,
-      "categorie": "componente interne",
-      "subcategorie": "hard disk"
+      "name": "Mouse Razer DeathAdder V2",
+      "description": "Mouse de gaming ergonomic cu senzor optic de 20.000 DPI.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 300,
+      "productType": "Mouse"
     },
     {
-      "nume": "Placă de sunet Creative Sound BlasterX AE-5",
-      "descriere": "Placă de sunet de înaltă calitate pentru o experiență audio superioară.",
-      "imagine": "url_to_image13.jpg",
-      "pret": 450,
-      "categorie": "componente interne",
-      "subcategorie": "placa de sunet"
+      "name": "Căști HyperX Cloud II",
+      "description": "Căști de gaming cu sunet surround 7.1 și microfon detașabil.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 450,
+      "productType": "Casti"
     },
     {
-      "nume": "Cablu SATA III de 0.5m",
-      "descriere": "Cablu SATA III pentru conectarea dispozitivelor de stocare interne.",
-      "imagine": "url_to_image14.jpg",
-      "pret": 20,
-      "categorie": "componente interne",
-      "subcategorie": "cablu"
+      "name": "Webcam Logitech C920",
+      "description": "Webcam HD 1080p cu microfon integrat, ideal pentru conferințe video.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 400,
+      "productType": "Webcam"
     },
+  
     {
-      "nume": "Monitor Dell UltraSharp 27",
-      "descriere": "Monitor de 27 inch cu rezoluție 4K, ideal pentru editare foto și video.",
-      "imagine": "url_to_image15.jpg",
-      "pret": 2200,
-      "categorie": "componente externe",
-      "subcategorie": "monitor"
+      "name": "Imprimantă multifuncțională HP OfficeJet Pro",
+      "description": "Imprimantă color multifuncțională cu funcții de scanare, copiere și fax.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 700,
+      "productType": "Imprimanta"
     },
+
     {
-      "nume": "Tastatură mecanică Logitech G Pro X",
-      "descriere": "Tastatură mecanică de gaming cu switch-uri personalizabile.",
-      "imagine": "url_to_image16.jpg",
-      "pret": 600,
-      "categorie": "componente externe",
-      "subcategorie": "tastatura"
-    },
-    {
-      "nume": "Mouse Razer DeathAdder V2",
-      "descriere": "Mouse de gaming ergonomic cu senzor optic de 20.000 DPI.",
-      "imagine": "url_to_image17.jpg",
-      "pret": 300,
-      "categorie": "componente externe",
-      "subcategorie": "mouse"
-    },
-    {
-      "nume": "Căști HyperX Cloud II",
-      "descriere": "Căști de gaming cu sunet surround 7.1 și microfon detașabil.",
-      "imagine": "url_to_image18.jpg",
-      "pret": 450,
-      "categorie": "componente externe",
-      "subcategorie": "casti"
-    },
-    {
-      "nume": "Webcam Logitech C920",
-      "descriere": "Webcam HD 1080p cu microfon integrat, ideal pentru conferințe video.",
-      "imagine": "url_to_image19.jpg",
-      "pret": 400,
-      "categorie": "componente externe",
-      "subcategorie": "webcam"
-    },
-    {
-      "nume": "Hub USB Anker 4 porturi",
-      "descriere": "Hub USB 3.0 cu 4 porturi pentru conectarea perifericelor multiple.",
-      "imagine": "url_to_image20.jpg",
-      "pret": 100,
-      "categorie": "componente externe",
-      "subcategorie": "hub usb"
-    },
-    {
-      "nume": "Imprimantă multifuncțională HP OfficeJet Pro",
-      "descriere": "Imprimantă color multifuncțională cu funcții de scanare, copiere și fax.",
-      "imagine": "url_to_image21.jpg",
-      "pret": 700,
-      "categorie": "componente externe",
-      "subcategorie": "imprimanta"
-    },
-    {
-      "nume": "Microfon Blue Yeti",
-      "descriere": "Microfon USB de înaltă calitate pentru streaming și înregistrări audio.",
-      "imagine": "url_to_image22.jpg",
-      "pret": 600,
-      "categorie": "componente externe",
-      "subcategorie": "microfon"
-    },
-    {
-      "nume": "Boxe Logitech Z906",
-      "descriere": "Sistem de boxe 5.1 cu sunet surround, certificat THX.",
-      "imagine": "url_to_image23.jpg",
-      "pret": 1500,
-      "categorie": "componente externe",
-      "subcategorie": "boxe"
-    },
-    {
-      "nume": "Adaptor HDMI la VGA",
-      "descriere": "Adaptor pentru conectarea dispozitivelor HDMI la monitoare VGA.",
-      "imagine": "url_to_image24.jpg",
-      "pret": 50,
-      "categorie": "componente externe",
-      "subcategorie": "adaptor"
+      "name": "Boxe Logitech Z906",
+      "description": "Sistem de boxe 5.1 cu sunet surround, certificat THX.",
+      "image1": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      "image2": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg",
+      "image3": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+      "image4": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg",
+      "price": 1500,
+      "productType": "Boxe"
     }
   ]
 }

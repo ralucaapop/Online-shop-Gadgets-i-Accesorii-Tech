@@ -1,8 +1,13 @@
 package com.java_shop.model;
 
 public enum ProductType {
-    SMALL,
-    MEDIUM,
-    LARGE,
-    NONE,
+    Laptop,
+    Procesoare,
+    PlaciVideo,
+    PlaciDeBaza,
+    MemoriiRAM,
+    Tastaturi,
+    Mouse,
+    Monitoare,
+    Casti
 }

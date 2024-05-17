@@ -1,7 +1,7 @@
 .drawer-container {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: #f0f0f0; /* Schimbat la o nuanță mai deschisă pentru un aspect mai curat */
 }
 
 .drawer-sidenav-content {
@@ -10,47 +10,86 @@
 
 .drawer-sidenav {
   padding: 20px;
+  background-color: #fff; /* Fundal alb pentru contrast mai bun */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Adăugat umbră pentru efect de profunzime */
+  border-radius: 8px; /* Colțuri rotunjite pentru un aspect modern */
 }
-.card-menu-button-Owner{
+
+.card-menu-button-Owner {
   width: 350px;
   margin-bottom: 16px;
-  cursor: none;
-  text-align:center;
+  cursor: default;
+  text-align: center;
+  background-color: #e3f2fd; /* Culoare de fundal deschisă pentru diferențiere */
+  border: 1px solid #90caf9; /* Border pentru delimitare */
+  border-radius: 8px; /* Colțuri rotunjite */
 }
+
 .card-menu-button {
   width: 350px;
   margin-bottom: 16px;
   cursor: pointer;
+  background-color: #fff; /* Fundal alb pentru un aspect curat */
+  border: 1px solid #ddd; /* Border pentru delimitare */
+  border-radius: 8px; /* Colțuri rotunjite */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Tranziții pentru hover */
+}
+
+.card-menu-button:hover {
+  background-color: #f0f0f0; /* Fundal mai închis la hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Umbra la hover */
 }
 
 .div-logo {
   width: 100%;
   display: flex;
 }
-.img-logo{
+
+.img-logo {
   height: 200px;
   margin: auto;
+  border-radius: 10px; /* Colțuri rotunjite pentru imagine */
 }
-.img-banner{
+
+.img-banner {
   width: 30%;
   margin: 16px;
   height: 300px;
   border-radius: 10px;
   object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adăugat umbră pentru efect de profunzime */
 }
 
 .card-about-us {
   margin: 16px;
+  padding: 16px; /* Adăugat padding pentru conținut */
+  background-color: #fff; /* Fundal alb pentru contrast */
+  border-radius: 8px; /* Colțuri rotunjite */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Adăugat umbră */
+}
+.text-simple {
+  font-family: Arial, sans-serif; /* Font standard pentru lizibilitate */
+  font-size: 16px; /* Mărimea textului */
+  line-height: 1.6; /* Înălțimea liniei pentru lizibilitate */
+  color: #333; /* Culoare text */
+  margin-bottom: 16px; /* Spațiu de jos pentru separare */
+  text-align: justify; /* Aliniere justificată pentru un aspect îngrijit */
+  padding: 8px 0; /* Padding pentru spațiu interior */
 }
 
 .title-about-us {
-  margin: 16px;
+  margin: 16px 0;
+  font-family: "Arial Black", sans-serif; /* Font îngroșat pentru titlu */
+  font-size: 24px; /* Mărimea fontului mărită */
+  color: #333; /* Culoare text */
 }
 
 .text-about-us {
-  font-family: Arial;
+  font-family: Arial, sans-serif; /* Specificat font fallback */
   font-size: 16px;
   font-weight: normal;
+  line-height: 1.6; /* Line height mărit pentru lizibilitate */
+  color: #555; /* Culoare text pentru contrast */
 }
 
 .text-margin-top {
@@ -59,10 +98,13 @@
 
 .div-text {
   display: flex;
+  align-items: center; /* Aliniere pe verticală la centru */
 }
 
 .img-section {
   width: 350px;
   margin-left: 16px;
   border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adăugat umbră */
+  object-fit: cover;
 }

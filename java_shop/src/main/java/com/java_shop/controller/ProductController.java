@@ -68,6 +68,7 @@ public class ProductController {
     @PostMapping("/setup-products")
     public ResponseEntity<ApiResponse> setupProducts(@RequestBody ProductsDto productsDto)
     {
+        System.out.println("requesat add");
         if(productsDto != null)
         {
             for (int i=0;i<productsDto.getProducts().size();i++)
