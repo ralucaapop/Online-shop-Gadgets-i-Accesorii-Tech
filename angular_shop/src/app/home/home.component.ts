@@ -7,6 +7,7 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { Router } from "@angular/router";
 import { ListProductsComponent } from "../list-products/list-products.component";
+
 import { ConfigurationsService } from "../services/configurations.service";
 import { CustomerService } from "../services/customer.service";
 import { BannerComponent } from './banner/banner.component'; // Asumați că banner este în folderul `home/banner`
@@ -34,7 +35,8 @@ export class HomeComponent {
   showProductButtons2: boolean = false;
   showProductButtons3: boolean = false;
 
-  constructor(public appConfig: ConfigurationsService, private router: Router, private customerService: CustomerService) {}
+  constructor( public appConfig: ConfigurationsService, private router: Router, private customerService: CustomerService) {
+  }
 
   isUserAdmin() {
     return this.customerService.getLoggedUser() != null && this.customerService.getLoggedUser().userRole === "ADMIN";
@@ -61,7 +63,7 @@ export class HomeComponent {
   }
 
   showProducts(category: string) {
-    // this.router.navigate(['/','auth']);  // Pare să fie o greșeală aici, presupunând că vrei să navighezi la produse, nu la auth.
-    // Aici ar trebui să fie codul care încarcă produsele pe baza categoriei.
+    this.router.navigate(['/','product-choice']);
   }
+
 }

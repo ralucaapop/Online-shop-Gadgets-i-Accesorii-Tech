@@ -50,7 +50,7 @@ public class AdminServiceImpl implements AdminService {
         product1.setName("Laptop");
         product1.setDescription("Un laptop");
         product1.setPrice(10000);
-        product1.setProductType(ProductType.LARGE);
+        product1.setProductType(ProductType.Laptop);
         product1.setImage1("");
         product1.setImage2("");
         product1.setImage3("");

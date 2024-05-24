@@ -26,12 +26,4 @@ public class Customer {
     @JsonIgnoreProperties("customer")
     private List<OrderData> orderData;
 
-    public void setName(String popescuMihai) {
-    }
-
-    public void setEmail(String mail) {
-    }
-
-    public void setAddress(String s) {
-    }
 }

@@ -1,9 +1,12 @@
 package com.java_shop.controller;
 
 
+import com.java_shop.dto.CustomersDto;
+import com.java_shop.dto.ProductsDto;
 import com.java_shop.exception.ResourceNotFoundException;
 import com.java_shop.model.Customer;
 
+import com.java_shop.model.Product;
 import com.java_shop.service.CustomerService;
 import com.java_shop.utils.ApiResponse;
 import lombok.RequiredArgsConstructor;
@@ -78,6 +81,16 @@ public class   CustomerController {
 
         return ResponseEntity.ok(ApiResponse.success("Customer with id: " + id + " deleted successfully", null));
     }
+    @PostMapping("/setup-customers")
+    public ResponseEntity<ApiResponse> setupCustomers(@RequestBody CustomersDto customersDto) {
+        if (customersDto != null) {
+            for (int i = 0; i < customersDto.getCustomers().size(); i++) {
+                Customer customer = customersDto.getCustomers().get(i);
+                saveCustomer(customer);
+            }
+        }
+        return ResponseEntity.ok(ApiResponse.success("Date produse adaugate cu succes", null));
 
+    }
 
 }

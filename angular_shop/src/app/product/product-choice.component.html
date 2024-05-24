@@ -1,0 +1,114 @@
+<mat-drawer-container class="drawer-container" autosize>
+  <mat-drawer #drawer class="drawer-sidenav" mode="side">
+
+    <div class="div-logo">
+      <img class="img-logo"
+           [src]="appConfig.getAppLogo()"/>
+    </div>
+    <mat-card class="card-menu-button-Owner">
+      <mat-card-content>
+        <p>{{ appConfig.getAppOwner() }}</p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="card-menu-button" (click)="gohome()">
+      <mat-card-content>
+        <p>Home</p>
+      </mat-card-content>
+    </mat-card>
+
+
+    <mat-card class="card-menu-button" (click)="toggleProductButtons()">
+      <mat-card-content>
+        <p>Produs</p>
+      </mat-card-content>
+    </mat-card>
+
+    <div *ngIf="showProductButtons">
+      <mat-card class="card-menu-button" (click)="showProducts('Laptop')">
+        <mat-card-content>
+          <p> >Laptopuri </p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="card-menu-button" (click)="toggleProductButtons2()">
+        <mat-card-content>
+          <p> >Componente interne</p>
+        </mat-card-content>
+      </mat-card>
+      <div *ngIf="showProductButtons2">
+        <mat-card class="card-menu-button" (click)="showProducts('Procesoare')">
+          <mat-card-content>
+            <p> >>Procesoare</p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="card-menu-button" (click)="showProducts('PlaciVideo')">
+          <mat-card-content>
+            <p> >>Placi video</p>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-menu-button" (click)="showProducts('PlaciDeBaza')">
+          <mat-card-content>
+            <p> >>Placi de baza</p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="card-menu-button" (click)="showProducts('MemorieRAM')">
+          <mat-card-content>
+            <p> >>MemorieRAM</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <mat-card class="card-menu-button" (click)="toggleProductButtons3()">
+        <mat-card-content>
+          <p> >Componente externe</p>
+        </mat-card-content>
+      </mat-card>
+      <div *ngIf="showProductButtons3">
+        <mat-card class="card-menu-button" (click)="showProducts('Tastaturi')">
+          <mat-card-content>
+            <p> >>Tastaturi</p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="card-menu-button" (click)="showProducts('Mouse')">
+          <mat-card-content>
+            <p> >>Mouse-uri</p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="card-menu-button" (click)="showProducts('Monitoare')">
+          <mat-card-content>
+            <p> >>Monitoare</p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="card-menu-button" (click)="showProducts('Casti')">
+          <mat-card-content>
+            <p> >>Casti</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+    </div>
+
+    <mat-card class="card-menu-button" (click)="onLogOut()">
+      <mat-card-content>
+        <p>Logout</p>
+      </mat-card-content>
+    </mat-card>
+  </mat-drawer>
+
+  <div class="drawer-sidenav-content">
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>{{ appConfig.getAppName() }}</span>
+      <span class="example-spacer"></span>
+      <app-cart-button></app-cart-button>
+    </mat-toolbar>
+
+    <app-list-products-choice [isAdmin]="false"></app-list-products-choice>
+  </div>
+
+</mat-drawer-container>
+

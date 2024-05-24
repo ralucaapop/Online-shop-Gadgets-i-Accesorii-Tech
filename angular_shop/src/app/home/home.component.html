@@ -1,6 +1,5 @@
 <mat-drawer-container class="drawer-container" autosize>
   <mat-drawer #drawer class="drawer-sidenav" mode="side">
-
     <div class="div-logo">
       <img class="img-logo" [src]="appConfig.getAppLogo()" />
     </div>
@@ -22,7 +21,7 @@
     </mat-card>
 
     <div *ngIf="showProductButtons">
-      <mat-card class="card-menu-button" (click)="showProducts('PC/Laptop')">
+      <mat-card class="card-menu-button" (click)="showProducts('Laptop')">
         <mat-card-content>
           <p> >Laptopuri/PC </p>
         </mat-card-content>
@@ -103,6 +102,7 @@
       <span class="example-spacer"></span>
       <app-cart-button></app-cart-button>
     </mat-toolbar>
+    <!-- <app-slides></app-slides> -->
 
     <app-banner></app-banner>
 

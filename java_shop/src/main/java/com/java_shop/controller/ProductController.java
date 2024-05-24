@@ -1,6 +1,7 @@
 package com.java_shop.controller;
 
 
+import com.java_shop.dto.ProductsDto;
 import com.java_shop.exception.ResourceNotFoundException;
 import com.java_shop.model.Product;
 import com.java_shop.service.ProductService;
@@ -65,4 +66,15 @@ public class ProductController {
         return ResponseEntity.ok(ApiResponse.success("Delete product", null));
     }
 
+    @PostMapping("/setup-products")
+    public ResponseEntity<ApiResponse> setupProducts(@RequestBody ProductsDto productsDto) {
+        if (productsDto != null) {
+            for (int i = 0; i < productsDto.getProducts().size(); i++) {
+                Product product = productsDto.getProducts().get(i);
+                saveProduct(product);
+            }
+        }
+        return ResponseEntity.ok(ApiResponse.success("Date produse adaugate cu succes", null));
+
+    }
 }
