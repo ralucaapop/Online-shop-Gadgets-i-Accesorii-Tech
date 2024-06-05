@@ -73,6 +73,8 @@ public class AuthServiceImpl implements AuthService {
         Customer customer = new Customer();
         customer.setName(registerDto.getUsername());
         customer.setEmail(registerDto.getEmail());
+        customer.setAddress(registerDto.getUserAddr());
+        customer.setPhone(registerDto.getUserPhone());
 
         String password = BCrypt.hashpw(registerDto.getPassword(), BCrypt.gensalt());
         customer.setPassword(password);
