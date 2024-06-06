@@ -1,4 +1,7 @@
 <div class="page-view">
+  <mat-form-field appearance="outline" style="margin-left: 50px; margin-bottom: 20px; height: 60px;">
+    <input matInput placeholder="Search" (keyup)="filterChange($event)" style="height: 20px;">
+  </mat-form-field>
   <mat-card *ngFor="let customer of customers" class="card-customer">
     <mat-card-content>
 

@@ -10,3 +10,4 @@ public class FinalProjectJavaApplication {
         SpringApplication.run(FinalProjectJavaApplication.class, args);
     }
 }
+ 
