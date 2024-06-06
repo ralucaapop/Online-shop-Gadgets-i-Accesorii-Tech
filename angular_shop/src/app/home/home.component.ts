@@ -50,6 +50,18 @@ export class HomeComponent {
     this.router.navigate(['/', 'auth']);
   }
 
+  toLaptops(){
+    this.router.navigate(['/', 'laptops'])
+  }
+  toCasti(){
+    this.router.navigate(['/', 'casti'])
+  }
+  toTastaturi(){
+    this.router.navigate(['/', 'tastaturi'])
+  }
+  toMouse(){
+    this.router.navigate(['/', 'mouse'])
+  }
   public toggleProductButtons() {
     this.showProductButtons = !this.showProductButtons;
   }

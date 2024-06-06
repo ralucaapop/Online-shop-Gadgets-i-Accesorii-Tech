@@ -8,7 +8,7 @@ import { OrderService } from "../services/order.service";
 import { ProductService } from "../services/product.service";
 
 @Component({
-  selector: 'app-list-products',
+  selector: 'app-list-tastaturi',
   standalone: true,
   imports: [
     MatCardModule,
@@ -17,8 +17,8 @@ import { ProductService } from "../services/product.service";
     NgIf,
     TitleCasePipe
   ],
-  templateUrl: './list-products.component.html',
-  styleUrl: './list-products.component.css'
+  templateUrl: './list-tastaturi.html',
+  styleUrl: './list-tastaturi.css'
 })
 export class ListProductsComponent {
   @Output() changeData = new EventEmitter<any>();// EventEmitter ne ajuta sa transmitem obiecte inafara componentei
@@ -27,7 +27,7 @@ export class ListProductsComponent {
 
   constructor(private productService: ProductService, private orderService: OrderService, private customerService: CustomerService, private router: Router) {
     this.productService.getProductList().subscribe((productList: Array<any>) => {
-      this.products = productList;
+      this.products = productList.filter(product => product.productType == 'Tastaturi');
     })
 
   }

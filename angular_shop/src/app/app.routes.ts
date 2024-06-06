@@ -8,6 +8,10 @@ import {CustomersManagerComponent} from "./dashboard/customers-manager/customers
 import {OrdersManagerComponent} from "./dashboard/orders-manager/orders-manager.component";
 import {ProductsManagerComponent} from "./dashboard/products-manager/products-manager.component";
 import {ProductDetailsComponent} from "./product-details/product-details.component";
+import {LaptopsComponent} from "./laptops/laptops";
+import {CastiComponent} from "./casti/casti";
+import {TastaturiComponent} from "./tastaturi/tastaturi";
+
 
 
 export const routes: Routes = [
@@ -22,6 +26,15 @@ export const routes: Routes = [
   },
   {
     path:'product-choice', component: ProductChoiceComponentComponent
+  },
+  {
+    path:'laptops', component: LaptopsComponent
+  },
+  {
+    path:'casti', component: CastiComponent
+  },
+  {
+    path:'tastaturi', component: TastaturiComponent
   },
   {
     path: "dashboard", children: [

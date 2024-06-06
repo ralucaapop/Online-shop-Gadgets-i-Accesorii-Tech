@@ -34,6 +34,8 @@ export class AuthComponent {
 
   registerForm: FormGroup = new FormGroup({
     username: new FormControl('', [Validators.required]),
+    userPhone: new FormControl('', [Validators.required]),
+    userAddr: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required]),
     reTypePassword: new FormControl('', [Validators.required]),
@@ -132,6 +134,8 @@ export class AuthComponent {
   private resetRegisterForm() {
     this.registerForm = new FormGroup({
       username: new FormControl('', [Validators.required]),
+      userPhone: new FormControl('', [Validators.required]),
+      userAddr: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required]),
       reTypePassword: new FormControl('', [Validators.required]),

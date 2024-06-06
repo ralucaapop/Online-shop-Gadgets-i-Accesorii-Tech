@@ -84,6 +84,36 @@
       </div>
       <div class="div-input-field">
         <mat-form-field appearance="fill" class="input-field-form">
+          <mat-label>UserPhone</mat-label>
+          <input
+            matInput
+            placeholder=" PhoneNumber"
+            formControlName="userPhone"
+            required
+            id="register-userphone-input"
+          />
+          <mat-error *ngIf="registerForm.controls['userPhone'].invalid">{{
+              getErrorMessage(registerForm.controls["userPhone"])
+            }}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="div-input-field">
+        <mat-form-field appearance="fill" class="input-field-form">
+          <mat-label>UserAddress</mat-label>
+          <input
+            matInput
+            placeholder="Address"
+            formControlName="userAddr"
+            required
+            id="register-useraddr-input"
+          />
+          <mat-error *ngIf="registerForm.controls['userAddr'].invalid">{{
+              getErrorMessage(registerForm.controls["userAddr"])
+            }}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="div-input-field">
+        <mat-form-field appearance="fill" class="input-field-form">
           <mat-label>Enter your email</mat-label>
           <input
             matInput

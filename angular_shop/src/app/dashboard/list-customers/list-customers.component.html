@@ -1,4 +1,8 @@
 <div class="page-view">
+  <mat-form-field appearance="fill">
+    <mat-label>Search Customers</mat-label>
+    <input matInput (input)="onSearch($event)" placeholder="Enter customer name">
+  </mat-form-field>
   <mat-card *ngFor="let customer of customers" class="card-customer">
     <mat-card-content>
 
